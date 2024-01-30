@@ -1,0 +1,121 @@
+<html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Valentine's Day</title>
+    <style>
+        body {
+            font-family: 'Arial', sans-serif;
+            text-align: center;
+            background-color: #ffffff;
+            /* Light pink background */
+            margin: 0;
+            padding: 0;
+            height: 100vh;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+        }
+
+        h1 {
+            color: #f5668a;
+            /* Pink title */
+        }
+
+        #buttons {
+            margin-top: 20px;
+        }
+
+        button {
+            font-size: 18px;
+            padding: 10px 20px;
+            margin: 0 10px;
+            cursor: pointer;
+            background-color: #ffffff;
+            /* Light purple button background */
+            border: none;
+            border-radius: 10px;
+            color: #333;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+            transition: background-color 0.3s ease;
+        }
+
+        button:hover {
+            background-color: #ff74ae;
+            /* Darker purple on hover */
+        }
+
+        #result-text {
+            display: none;
+            margin-top: 20px;
+            font-size: 20px;
+            color: hsl(342, 100%, 79%);
+        }
+    </style>
+</head>
+
+<body>
+
+    <h1>wAnnA eXchaNge ValEntIne gIfTs w ME? (〃ω〃)</h1>
+
+    <div id="buttons">
+        <button onclick="handleButtonClick('yes')">Yes</button>
+        <button onclick="handleButtonClick('no')">No</button>
+    </div>
+
+    <div id="result-text"></div>
+
+    <script>
+        function handleButtonClick(choice) {
+            if (choice === 'yes') {
+                document.getElementById('result-text').innerHTML = "MWAUH MWUAH MWUAAAAAHHH! I LOVE U SM SM, GET READY FOR THE GIFT ON 14th FEBRUARY! (●´ω｀●)";
+                document.getElementById('result-text').style.color = "hsl(342, 100%, 79%)"; /* Pink text for positive message */
+            } else {
+                document.getElementById('result-text').innerHTML = "NUUUUU, I'm forcing you not to ehhh MAKE MAH HEART BROKEN NAAA. ( • ᴖ • ｡ )";
+                document.getElementById('result-text').style.color = "#ff6666"; /* Red text for negative message */
+                shakeScreen();
+            }
+
+            document.getElementById('buttons').style.display = 'none';
+            document.getElementById('result-text').style.display = 'block';
+        }
+
+        function shakeScreen() {
+            document.body.style.animation = 'shake 0.5s';
+            setTimeout(() => {
+                document.body.style.animation = '';
+            }, 500);
+        }
+    </script>
+
+    <style>
+        @keyframes shake {
+
+            0%,
+            100% {
+                transform: translateX(0);
+            }
+
+            10%,
+            30%,
+            50%,
+            70%,
+            90% {
+                transform: translateX(-10px);
+            }
+
+            20%,
+            40%,
+            60%,
+            80% {
+                transform: translateX(10px);
+            }
+        }
+    </style>
+
+</body>
+
+</html>
